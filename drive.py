@@ -193,7 +193,14 @@ def main():
     shield.frequency = 250
 
     commander = MotorController()
-
+    motor_config = {
+        0: (1, 0), 
+        1: (2, 3), 
+        2: (4, 5), 
+        3: (7, 6), 
+        4: (9, 8), 
+        5: (10, 11), 
+    }
     motors = []
     for motor_id in range(6):
         config = {
