@@ -210,8 +210,8 @@ def main():
                 'minimum_output': 65535 * 0.10,  # prevent motor damage?
                 'max_acceleration': 65535 * 0.1
             },
-            'forward_pin_id': motor_id * 2 + (motor_id % 2),
-            'reverse_pin_id': motor_id * 2 + 1 - (motor_id % 2),
+            'forward_pin_id': motor_config[motor_id][0],
+            'reverse_pin_id': motor_config[motor_id][1],
             'control_frequency': 50,
             'timeout': 0.5
         }
