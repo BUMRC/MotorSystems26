@@ -195,11 +195,11 @@ def main():
     commander = MotorController()
     motor_config = {
         0: (0, 6), 
-        1: (1, 7), 
+        1: (7, 1), 
         2: (2, 8), 
-        3: (3, 9), 
+        3: (9, 3), 
         4: (4, 10), 
-        5: (5, 11), 
+        5: (11, 5), 
     }
     motors = []
     for motor_id in range(6):
@@ -210,8 +210,8 @@ def main():
                 'minimum_output': 65535 * 0.20,  # prevent motor damage?
                 'max_acceleration': 65535 * 0.5
             },
-            'forward_pin_id': motor_config[motor_id][0],
-            'reverse_pin_id': motor_config[motor_id][1],
+            'forward_pin_id': motor_config[motor_id][1],
+            'reverse_pin_id': motor_config[motor_id][0],
             'control_frequency': 50,
             'timeout': 0.5
         }
