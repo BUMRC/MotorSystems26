@@ -205,10 +205,10 @@ def main():
     for motor_id in range(6):
         config = {
             'motor': {
-                'max_output': 65535 * 1,
-                'min_output': -65535 * 1,
-                'minimum_output': 65535 * 0.20,  # prevent motor damage?
-                'max_acceleration': 65535 * 0.5
+                'max_output': 65535 * 0.5,
+                'min_output': -65535 * 0.5,
+                'minimum_output': 65535 * 0.10,  # prevent motor damage?
+                'max_acceleration': 65535 * 0.25
             },
             'forward_pin_id': motor_config[motor_id][1],
             'reverse_pin_id': motor_config[motor_id][0],
